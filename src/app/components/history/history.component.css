@@ -1,25 +1,4 @@
-/** 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-}
-
-li:last-child {
-  border: none;
-}
-
-.column {
-  margin-left: 1%;
-}
-
-*/
+/** Table css: */
   .highlight{
     margin: 1em 0;
     min-width: 300px;

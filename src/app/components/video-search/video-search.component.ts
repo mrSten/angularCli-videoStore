@@ -11,6 +11,8 @@ import {
   templateUrl: './video-search.component.html',
   styleUrls: [ './video-search.component.css' ]
 })
+
+//Unused: Template for creating searchable field for videos / users in future
 export class VideoSearchComponent implements OnInit {
   videos$: Observable<Video[]>;
   

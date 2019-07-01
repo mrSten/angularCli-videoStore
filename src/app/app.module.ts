@@ -28,7 +28,7 @@ import { HistoryComponent } from './components/history/history.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    // Temp simulation, change when real impl. to API
+    // Temp simulation, change when real impl. to API!
     HttpClientInMemoryWebApiModule.forRoot(
       LocalMemoryDataService, { dataEncapsulation: false }
     )

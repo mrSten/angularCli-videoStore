@@ -36,9 +36,9 @@ export class VideosComponent implements OnInit {
     for(let video of videos){
       if(this.user.type){
         if(video.type == "DVD"){
-          video.price = (video.price*0.9);
+          video.price = (video.price*0.9); //if dvd+member
         }else {
-          video.price = (video.price*0.85);
+          video.price = (video.price*0.85); //if blueray+member
         }
       }
       this.videoService.addHistoryVideo(video)
@@ -46,8 +46,8 @@ export class VideosComponent implements OnInit {
       this.videoService.deleteVideo(video)
       .subscribe();
     }
-    this.getVideos(); //updates video array
-    this.chosenVideos = []; //removes taken videos from 'chosen' array
+    this.getVideos(); //updates (local) video array
+    this.chosenVideos = []; //removes taken videos from 'chosen' (local) array
   }
 
   choseVideo(id: number): void {

@@ -9,6 +9,7 @@ import { VideoService} from '../../services/video.service';
   templateUrl: './video-detail.component.html',
   styleUrls: ['./video-detail.component.css']
 })
+//Unused class-> for future details on movies (seperate view)
 export class VideoDetailComponent implements OnInit {
   @Input() 
   
@@ -18,7 +19,7 @@ export class VideoDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private videoService: VideoService,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.getVideo();

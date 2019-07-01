@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 
-
+//Handles all services for Video, connection to DB and CRUD operations
 export class VideoService {
   private videosUrl = 'api/videos';  // URL to web api
   private takenVideosUrl = 'api/takenVideos';

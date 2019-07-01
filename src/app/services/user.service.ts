@@ -9,6 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 
+//Handles all services for User, connection to DB and CRUD operations
 export class UserService {
   private userUrl = 'api/users'; //URL to web api
   

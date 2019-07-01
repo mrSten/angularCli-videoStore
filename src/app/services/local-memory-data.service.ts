@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
+
+//Local temp-database
 export class LocalMemoryDataService implements InMemoryDbService {
   createDb() {
     const videos = [
@@ -38,11 +40,6 @@ export class LocalMemoryDataService implements InMemoryDbService {
     
   }
 
-  // Overrides the genId method to ensure that a video  always has an id.
-  // If the videos array is empty,
-  // the method below returns the initial number (11).
-  // if the videos array is not empty, the method below returns the highest
-  // video id + 1.
   genId(videos: Video[]): number {
     return videos.length > 0 ? Math.max(...videos.map(video => video.id)) + 1 : 11;
   }

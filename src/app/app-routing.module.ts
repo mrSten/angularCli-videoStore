@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { VideoDetailComponent } from './components/video-detail/video-detail.component';
 import { HistoryComponent } from './components/history/history.component';
 
+//Available routes
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
