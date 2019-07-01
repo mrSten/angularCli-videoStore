@@ -1,0 +1,69 @@
+<div>
+  <h3>Login user </h3>
+  <!-- 
+  <ul class="videos">
+    <li *ngFor="let user of users">
+      <a routerLink="/videos/{{user.id}}">
+        <div class="row">
+
+          <div class="column">
+            <span class="badge">
+              {{user.id}}
+            </span>
+          </div>
+          <div class="column">
+            {{user.name}}
+          </div>
+          <div *ngIf=user.type class="column">
+            Member
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  -->
+  <div class="users">
+    <table class="highlight">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>MEMBER</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" class="hover-row" routerLink="/videos/{{user.id}}">
+
+          <td>
+            {{user.id}}
+          </td>
+          <td>
+            {{user.name}}
+          </td>
+          <td *ngIf="user.type" class="right-align">
+            Member
+          </td>
+          <td *ngIf="!user.type" class="right-align">
+            Non-member
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <form class="new-member-form">
+    <label>New member:
+      <input #userName placeholder="Name" />
+    </label>
+    <button (click)="add(userName.value, type); userName.value=''">
+      Add
+    </button>
+    <div>
+      Check for club-member discount:
+      <input class="member-checkbox" type="checkbox" [(ngModel)]="type" [ngModelOptions]="{standalone: true}">
+
+    </div>
+  </form>
+</div>

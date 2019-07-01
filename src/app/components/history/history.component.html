@@ -1,0 +1,59 @@
+<div>
+    <h3>Movies taken out</h3>
+    <!-- 
+    <ul class="videos">
+        <li *ngFor="let video of videos">
+            <div class="row">
+                <div>
+                    <span class="badge">
+                        {{video.id}}
+                    </span>
+                </div>
+                <div class="column">
+                    {{video.name}} |
+                </div>
+                <div class="column">
+                    {{video.type}} |
+                </div>
+                <div class="column">
+                    {{video.price}}:-
+                </div>
+            </div>
+        </li>
+    </ul>
+    -->
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    NAME
+                </th>
+                <th>
+                    TYPE
+                </th>
+                <th>
+                    PRICE
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let video of videos">
+                <td>
+                    {{video.id}}
+                </td>
+                <td>
+                    {{video.name}}
+                </td>
+                <td>
+                    {{video.type}}
+                </td>
+                <td>
+                    {{video.price}}:-
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

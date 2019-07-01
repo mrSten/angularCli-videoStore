@@ -1,0 +1,7 @@
+<div *ngIf="confirmationService.confirmations.length">
+
+        <h2>Messages</h2>
+        <button class="clear" (click)="confirmationService.clear()">clear</button>
+        <div *ngFor='let confirmation of confirmationService.confirmations'> {{confirmation}} </div>
+
+</div>

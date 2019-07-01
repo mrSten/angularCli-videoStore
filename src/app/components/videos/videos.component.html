@@ -1,0 +1,223 @@
+<!-- 
+    
+    <div *ngIf="user">
+        <h3 *ngIf="user">Logged in as:
+            <p>{{user.name}}</p>
+        </h3>
+        <h3>Choose movies to take out:</h3>
+        
+        <ul class="videos">
+            <li *ngFor="let video of videos" (click)="choseVideo(video.id)">
+                <div class="row">
+                    
+                    <div class="column">
+                        <span class="badge">
+                            {{video.id}}
+                        </span>
+                    </div>
+                    <div class="column">
+                        {{video.name}} |
+                    </div>
+                    <div class="column">
+                        {{video.type}} |
+                    </div>
+                    <div class="column">
+                        {{video.price}}:-
+                    </div>
+                    
+                </div>
+            </li>
+            
+        </ul>
+        <div *ngIf="chosenVideos.length">
+            <h2>Chosen movies:</h2>
+            <ul class="videos">
+                <li *ngFor="let video of chosenVideos">
+                    <div class="row">
+                        
+                        <div class="column">
+                            <span class="badge">
+                                {{video.id}}
+                            </span>
+                        </div>
+                        <div class="column">
+                            {{video.name}} |
+                        </div>
+                        <div class="column">
+                            {{video.type}} |
+                        </div>
+                        <div class="column">
+                            {{video.price}}:-
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </li>
+                <div class="checkout">
+                    Total price: {{totalPrice}}:-
+                    <button (click)="onButtonClick(chosenVideos)">Check out movies</button>
+                </div>
+            </ul>
+            
+        </div>
+    </div>
+-->
+
+
+
+<div *ngIf="user" class="big-container">
+    <h3>Logged in as:
+        <p>{{user.name}}</p>
+    </h3>
+    <div class="table-containers">
+
+
+        <div class="align-left">
+            <h3>Choose movies to take out:</h3>
+
+
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            NAME
+                        </th>
+                        <th>
+                            TYPE
+                        </th>
+                        <th>
+                            PRICE
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let video of videos" (click)="choseVideo(video.id)" class="hover-row">
+                        <td>
+                            {{video.id}}
+                        </td>
+                        <td>
+                            {{video.name}}
+                        </td>
+                        <td>
+                            {{video.type}}
+                        </td>
+                        <td>
+                            {{video.price}}:-
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div *ngIf="chosenVideos.length" class="align-right">
+            <h2>Chosen movies:</h2>
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            NAME
+                        </th>
+                        <th>
+                            TYPE
+                        </th>
+                        <th>
+                            PRICE
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let video of chosenVideos">
+                        <td>
+                            {{video.id}}
+                        </td>
+                        <td>
+                            {{video.name}}
+                        </td>
+                        <td>
+                            {{video.type}}
+                        </td>
+                        <td>
+                            {{video.price}}:-
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="checkout">
+                Total price: {{totalPrice}}:-
+                <button (click)="onButtonClick(chosenVideos)">Check out movies</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+    <div *ngIf="!user">
+        <ul class="videos">
+            <h2>Not logged in</h2>
+            <li *ngFor="let video of videos">
+                <div class="row">
+                    <div class="column">
+                        <span class="badge">
+                            {{video.id}}
+                        </span>
+                    </div>
+                    <div class="column">
+                        {{video.name}} |
+                    </div>
+                    <div class="column">
+                        {{video.type}} |
+                    </div>
+                    <div class="column">
+                        {{video.price}}:-
+                        
+                    </div>
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+-->
+<div *ngIf="!user">
+    <h2>Not logged in</h2>
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    NAME
+                </th>
+                <th>
+                    TYPE
+                </th>
+                <th>
+                    PRICE
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let video of videos">
+                <td>
+                    {{video.id}}
+                </td>
+                <td>
+                    {{video.name}}
+                </td>
+                <td>
+                    {{video.type}}
+                </td>
+                <td>
+                    {{video.price}}:-
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
